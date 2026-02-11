@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 *{
   margin: 0;
   padding: 0;
@@ -12,7 +13,8 @@
   padding: 2rem;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(135deg, #001f9d 0%, #005687 50%, #2a1f3a 100%);
+  background: linear-gradient(135deg, #425bfd 0%, #687be5 50%, #b98bff 100%);
+  font-family: "Outfit", sans-serif;
 }
 .auth-background{
   position: absolute;
@@ -20,7 +22,7 @@
   overflow: hidden;
   z-index: 0;
 }
-.gradiente-orb{
+.gradient-orb{
   position: absolute;
   border-radius: 50%;
   filter: blur(80px);
@@ -32,7 +34,7 @@
   height: 500px;
   background: radial-gradient(circle, #ff6b9d 0%, transparent 70%);
   top: -10%;
-  left:-10%;
+  left: -10%;
   animation-delay: 0s;
 }
 .orb-2{
@@ -40,7 +42,7 @@
   height: 400px;
   background: radial-gradient(circle, #4158d0 0%, transparent 70%);
   bottom: -5%;
-  right:-5%;
+  right: -5%;
   animation-delay: 5s;
 }
 .orb-3{
@@ -52,12 +54,73 @@
   animation-delay: 10s;
 }
 @keyframes float{
-  0%, 100%
+  0%, 100%{
     transform: translate(0, 0) scale(1);
-}
-33%{
-    transform:translate(50px, -50px) scale(1.2);
-}
-66%{
+  }
+  33%{
+    transform: translate(50px, -50px) scale(1.2);
+  }
+  66%{
     transform: translate(-30px, 30px) scale(0.7);
+  }
+}
+.auth-card{
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  max-width: 440px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  border-radius: 24px;
+  padding: 3rem 2.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  animation: slideUp 0.6s ease-out;
+}
+@keyframes slideUp{
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  } 
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.auth-header{
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+.auth-header h1{
+  font-size: 2.5em;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+}
+.auth-header p{
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 300;
+}
+.form-group{
+  display: flex;
+  font-display: column;
+  gap: 0.3rem;
+  animation: fadeIn 0.4s ease-out backwards;
+}
+.form-group:nth-child(1){animation-delay: 0.1s;}
+.form-group:nth-child(2){animation-delay: 0.2s;}
+.form-group:nth-child(3){animation-delay: 0.3s;}
+.form-group:nth-child(4){animation-delay: 0.4s;}
+
+@keyframes fadeIn{
+  from{
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
